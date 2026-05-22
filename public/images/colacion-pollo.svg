@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f9f4e8"/>
+      <stop offset="100%" stop-color="#d2c3aa"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" rx="48" fill="url(#g)"/>
+  <circle cx="250" cy="260" r="140" fill="#e7c28a"/>
+  <rect x="430" y="210" width="240" height="120" rx="24" fill="#fff4e1" stroke="#d6b584" stroke-width="8"/>
+  <rect x="420" y="360" width="280" height="160" rx="32" fill="#fef0db" stroke="#d6b584" stroke-width="8"/>
+  <circle cx="520" cy="450" r="32" fill="#e0a272"/>
+  <circle cx="580" cy="410" r="24" fill="#e0a272"/>
+  <path d="M220 380 C180 430 170 520 220 540 C270 560 300 520 300 470 C300 430 260 380 220 380 Z" fill="#d6b584"/>
+  <path d="M260 260 C240 210 280 190 310 210" stroke="#b7824f" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <text x="50%" y="720" text-anchor="middle" font-family="Inter, sans-serif" font-size="54" fill="#594a32" font-weight="700">Colación de Pollo</text>
+</svg>

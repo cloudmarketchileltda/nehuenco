@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fdf3d7"/>
+      <stop offset="100%" stop-color="#f0c987"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" rx="48" fill="url(#grad1)"/>
+  <ellipse cx="400" cy="430" rx="290" ry="160" fill="#f5d6a6"/>
+  <path d="M240 360 C300 300 380 320 460 330 C520 340 600 360 660 390" fill="none" stroke="#c27c29" stroke-width="28" stroke-linecap="round"/>
+  <path d="M190 420 C250 420 350 470 430 470 C510 470 580 420 660 420" fill="none" stroke="#804513" stroke-width="42" stroke-linecap="round"/>
+  <circle cx="280" cy="390" r="30" fill="#8f4f1a"/>
+  <circle cx="360" cy="450" r="26" fill="#8f4f1a"/>
+  <circle cx="460" cy="370" r="28" fill="#8f4f1a"/>
+  <text x="400" y="720" text-anchor="middle" font-family="Inter, sans-serif" font-size="50" fill="#6f401b" font-weight="700">Chorrillana</text>
+</svg>

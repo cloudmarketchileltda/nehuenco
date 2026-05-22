@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  /* Restobar Nehuenco Color Palette */
+  --color-salvia: #5B9E6B;
+  --color-menta: #8EC9A1;
+  --color-pastel-green: #B8E0C4;
+  --color-fondos-light: #D4EDDA;
+  --color-aguamarina: #C9E8D5;
+  --color-durazno: #FFE0B2;
+  --color-amarillo-suave: #FFF8DC;
+  --color-crema: #FFF9E6;
+  --color-vegetal: #F0F7F4;
+  --color-verde-oscuro: #3D7A55;
+  --color-verde-profundo: #2C4A3E;
+
+  /* Typography */
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+:root {
+  --background: #F0F7F4; /* vegetal */
+  --foreground: #3D7A55; /* verde-oscuro */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+}
+
+/* Glassmorphism utility for clean modern feel */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-sage {
+  background: rgba(91, 158, 107, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(91, 158, 107, 0.2);
+}
+
+/* Subtle organic paper texture */
+.paper-texture {
+  background-color: #F0F7F4;
+  background-image: radial-gradient(rgba(91, 158, 107, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbars for clean design */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(91, 158, 107, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8E0C4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8EC9A1;
+}
+
+/* Print Styling for Tickets */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-card {
+    border: 1px dashed #000000 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Coupon Print Rules */
+  body.printing-coupon header,
+  body.printing-coupon footer,
+  body.printing-coupon main > *:not(#printable-coupon-modal) {
+    display: none !important;
+  }
+  body.printing-coupon #printable-coupon-modal {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
