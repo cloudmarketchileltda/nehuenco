@@ -43,6 +43,14 @@ git push -u origin main
 **Archivos creados**:
 - **`nixpacks.toml`**: Configuración para Nixpacks (usado por Dokploy) que especifica `nodejs_22` como paquete Nix, instala dependencias con `npm ci --omit=dev` y ejecuta el build y start.
 - **`.nvmrc`**: Archivo con la versión `22` para que herramientas como NVM y Nixpacks detecten automáticamente la versión de Node.js requerida.
+- **`.env.example`**: Archivo de ejemplo con las variables de entorno necesarias (`NEXT_PUBLIC_ADMIN_USERNAME` y `NEXT_PUBLIC_ADMIN_PASSWORD`).
+
+**Correcciones realizadas**:
+- Se eliminó el `...` (spread inválido) del array `nixPkgs` en `nixpacks.toml` que causaba error de parseo TOML: `expected a value, found a period at line 2 column 25`.
+
+**Variables de entorno requeridas en Dokploy**:
+- `NEXT_PUBLIC_ADMIN_USERNAME` — Usuario para el panel de administración (default: `admin`)
+- `NEXT_PUBLIC_ADMIN_PASSWORD` — Contraseña para el panel de administración (default: `nehuenco2026`)
 
 **Impacto**: El build en Dokploy ahora usará Node.js 22, compatible con Next.js 16, resolviendo el error:
 ```
