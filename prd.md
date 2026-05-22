@@ -47,7 +47,7 @@ git push -u origin main
 
 **Correcciones realizadas**:
 - Se eliminó el `...` (spread inválido) del array `nixPkgs` en `nixpacks.toml` que causaba error de parseo TOML: `expected a value, found a period at line 2 column 25`.
-- Se cambió el script `start` en `package.json` de `next start -p 8080` a `next start` (sin puerto fijo), para que Next.js use el puerto por defecto **3000** que es el que Dokploy/Nixpacks espera para el mapeo de dominio.
+- Se cambió el script `start` en `package.json` de `next start -p 8080` a `next start -p 80`, para que en producción la aplicación escuche en el **puerto 80** (HTTP estándar).
 
 **Variables de entorno requeridas en Dokploy**:
 - `NEXT_PUBLIC_ADMIN_USERNAME` — Usuario para el panel de administración (default: `admin`)
@@ -55,7 +55,7 @@ git push -u origin main
 
 **Puerto de exposición**:
 - **Desarrollo local**: `puerto 8080` (configurado en script `dev`)
-- **Producción (Dokploy)**: `puerto 3000` (puerto por defecto de Next.js, sin flag `-p`)
+- **Producción (Dokploy)**: `puerto 80` (configurado en script `start`)
 
 **Impacto**: El build en Dokploy ahora usará Node.js 22, compatible con Next.js 16, resolviendo el error:
 ```
