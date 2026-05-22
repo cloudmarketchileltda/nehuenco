@@ -34,6 +34,21 @@ git remote add origin https://github.com/cloudmarketchileltda/nehuenco.git
 git push -u origin main
 ```
 
+## Configuración de Node.js para Dokploy/Nixpacks — 2026-05-22
+
+**Tipo**: infraestructura | deploy
+
+**Descripción**: Se corrigió el error de build en Dokploy que usaba Node.js 18.20.5, incompatible con Next.js 16 que requiere Node.js >= 20.9.0. Se agregaron archivos de configuración para forzar el uso de Node.js 22 en el entorno de deploy.
+
+**Archivos creados**:
+- **`nixpacks.toml`**: Configuración para Nixpacks (usado por Dokploy) que especifica `nodejs_22` como paquete Nix, instala dependencias con `npm ci --omit=dev` y ejecuta el build y start.
+- **`.nvmrc`**: Archivo con la versión `22` para que herramientas como NVM y Nixpacks detecten automáticamente la versión de Node.js requerida.
+
+**Impacto**: El build en Dokploy ahora usará Node.js 22, compatible con Next.js 16, resolviendo el error:
+```
+You are using Node.js 18.20.5. For Next.js, Node.js version ">=20.9.0" is required.
+```
+
 ## Auditoría y Ajuste de Responsividad en Interfaces — 2026-05-20
 
 **Tipo**: refactor | decisión técnica
