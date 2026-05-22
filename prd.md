@@ -2,6 +2,38 @@
 
 Este archivo registra las decisiones técnicas y cambios relevantes del proyecto.
 
+## Respaldo del Proyecto en GitHub — 2026-05-22
+
+**Tipo**: infraestructura | respaldo
+
+**Descripción**: Se respaldó todo el proyecto en el repositorio remoto de GitHub `https://github.com/cloudmarketchileltda/nehuenco.git` en la rama `main`.
+
+**Detalles del respaldo**:
+- **Repositorio**: `cloudmarketchileltda/nehuenco`
+- **URL**: https://github.com/cloudmarketchileltda/nehuenco
+- **Rama**: `main`
+- **Commit**: `7a0a1e7` — "Respaldo inicial: Restobar Nehuenco - Aplicación web Next.js 15"
+- **Archivos respaldados**: 40 archivos (62 objetos git)
+- **Fecha**: 22 de mayo de 2026
+
+**Estructura del proyecto respaldado**:
+- `src/` — Código fuente de la aplicación Next.js 15 (App Router, TypeScript, Tailwind CSS v4)
+- `public/` — Archivos estáticos e imágenes SVG
+- `skills/` — Skills del asistente de IA (feature-generator, mobile-app-scaffolder, prd-manager, skill-creator, web-app-scaffolder)
+- `prd.md` — Registro de decisiones técnicas y cambios
+- `AGENTS.md`, `CLAUDE.md` — Configuración del asistente de IA
+- `package.json`, `tsconfig.json`, `next.config.ts`, `postcss.config.mjs`, `eslint.config.mjs` — Configuración del proyecto
+
+**Comandos ejecutados**:
+```bash
+git init
+git add .
+git commit -m "Respaldo inicial: Restobar Nehuenco - Aplicación web Next.js 15"
+git branch -m main
+git remote add origin https://github.com/cloudmarketchileltda/nehuenco.git
+git push -u origin main
+```
+
 ## Auditoría y Ajuste de Responsividad en Interfaces — 2026-05-20
 
 **Tipo**: refactor | decisión técnica
